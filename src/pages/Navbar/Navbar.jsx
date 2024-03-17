@@ -1,9 +1,11 @@
 import logo from "../../assets//logo.png"
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-
+    const { user } = useContext(AuthContext)
     const navItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/products">Products</Link></li>
@@ -32,7 +34,9 @@ const Navbar = () => {
                 <div className="navbar-end">
 
 
-                    <Link to="/login" className="">   <FaUserCircle className="text-2xl" /></Link>
+                    {
+                        !user ? <Link to="/login" className="">   <FaUserCircle className="text-2xl" /></Link> : <h2 className="font-bold text-amber-400">{user.displayName}</h2>
+                    }
 
                 </div>
             </div>
