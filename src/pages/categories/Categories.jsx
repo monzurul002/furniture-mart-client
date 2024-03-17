@@ -45,6 +45,7 @@ const Categories = () => {
 
     return (
         <div className="grid md:grid-cols-4 grid-cols-1 gap-5 py-3">
+
             {
                 categories.map(category => {
                     return <div onClick={() => showFurnitureByCategory((category.name))} key={category.id} className="card card-compact w-full bg-base-100 shadow-xl hover:cursor-pointer hover:border-4  ">
