@@ -1,11 +1,11 @@
-.card-body {
+.card-details {
     right: -100%;
 
 }
 
 
 
-.card:hover .card-body {
+.card:hover .card-details {
     right: 0;
     bottom: 50px;
     top: 60px;

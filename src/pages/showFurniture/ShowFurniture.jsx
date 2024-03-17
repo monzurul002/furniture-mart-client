@@ -34,7 +34,8 @@ const ShowFurniture = () => {
                 <h2 className="font-bold"><span className="text-sm">You have searched for</span> {categoryName}</h2>
                 <div>
                     <select onChange={handleSortChange}>
-                        <option disabled>Sort By</option>
+                        <option selected disabled>Sort By</option>
+
                         <option value="low">Low to high</option>
                         <option value="high">High to Low</option>
                     </select>
@@ -47,7 +48,7 @@ const ShowFurniture = () => {
                         <figure><img src={furniture?.image} className="hover:blur-sm w-11/12 pt-4 h-48 hover:ease-in-out" alt={furniture?.productName} /></figure>
                         <h2 className="text-center py-4">{furniture.productName}</h2>
                         <h2 className="font-bold text-center">${furniture.price}</h2>
-                        <div className="w-full card-body h-full absolute">
+                        <div className="w-full card-body card-details h-full absolute">
                             <div className="flex justify-center items-center gap-3">
                                 <button><MdOutlineAddShoppingCart /></button>
                                 <button><MdOutlineFavoriteBorder /></button>

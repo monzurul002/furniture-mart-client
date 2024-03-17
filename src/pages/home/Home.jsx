@@ -1,4 +1,5 @@
 import Header from "../Header/Header";
+import Specialization from "../Specialization/Specialization";
 import Categories from "../categories/Categories";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <Header />
             <Categories />
+            <Specialization />
         </div>
     );
 };

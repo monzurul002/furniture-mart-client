@@ -46,7 +46,7 @@ const ShowProductDetails = () => {
                     <h1 className="py-2 font-bold">$ {totalPrice ? totalPrice : productDetails?.price}</h1>
                     {/* <h1 className="py-2 font-bold">$ {totalPrice}</h1> */}
                     <h4 className="py-1">Category:  {productDetails.category?.toUpperCase()}</h4>
-                    <div className="flex justify-between w-3/5 ">
+                    <div className="flex justify-between w-full md:w-3/5 ">
                         <div className="py-3">
                             <span onClick={() => productCalculate("increment")} className="font-bold text-2xl border px-4 py-2 hover:bg-slate-200 hover:cursor-pointer">+</span>
                             <input
