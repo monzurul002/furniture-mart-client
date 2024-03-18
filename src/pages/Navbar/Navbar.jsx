@@ -4,14 +4,18 @@ import { FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
+
 const Navbar = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const navItems = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/products">Products</Link></li>
+        <li><Link to="/allfurnitures">Products</Link></li>
         <li><Link to="/showrooms">Showrooms</Link></li>
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact Us</Link></li></>
+
+
+
     return (
         <nav className="w-full md:w-11/12">
             <div className="navbar bg-base-100">
@@ -35,8 +39,25 @@ const Navbar = () => {
 
 
                     {
-                        !user ? <Link to="/login" className="">   <FaUserCircle className="text-2xl" /></Link> : <h2 className="font-bold text-amber-400">{user.displayName}</h2>
+                        !user ? <Link to="/login" className="">   <FaUserCircle className="text-2xl" /></Link> :
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                    </div>
+                                </div>
+                                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                    <li>
+                                        <h2 className="font-bold text-amber-400">{user?.displayName}</h2>
+
+                                    </li>
+
+                                    <li className="cursor-pointer ml-3" onClick={logOut}>Logout</li>
+                                </ul>
+                            </div>
                     }
+
+
 
                 </div>
             </div>

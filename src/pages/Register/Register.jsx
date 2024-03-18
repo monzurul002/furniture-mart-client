@@ -22,10 +22,25 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                                console.log(user);
                 if (user) {
+                    
                     updateUserInfo(name)
                         .then(() => {
+                          const userInfo = {name:data.name, email:user.email}
+                            fetch("http://localhost:5000/users", {
+                                method:"POST",
+                               headers:{
+                                "Content-Type":"application/json",
+                               },
+                                body:JSON.stringify(userInfo)
+                            }).then(()=>{
+
+                            }).catch(()=>{
+
+                            })
+
+
                             navigate("/")
                             return Swal.fire({
                                 title: "Good job!",
@@ -37,18 +52,6 @@ const Register = () => {
             }).then(error => {
                 console.log(error);
             })
-
-        // emailPassowrdSignIn()
-        // .then(result=>{
-        //     const user =result.user;
-        //     console.log(user);
-        // }).then(error)=>{
-        //     console.log(error);
-        // }
-
-
-
-
     }
 
     return (

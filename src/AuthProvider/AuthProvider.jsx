@@ -32,15 +32,11 @@ const AuthProvider = ({ children }) => {
     }
 
     const logOut = () => {
-        setLoading(true)
-        signOut(auth)
-            .then(() => {
-                // Sign-out successful.
-            }).catch(() => {
-                // An error happened.
-            });
 
-    }
+        return signOut(auth)
+
+    };
+
 
 
 
@@ -48,7 +44,22 @@ const AuthProvider = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, (currUser) => {
             if (currUser) {
                 setLoading(false)
-                return setUser(currUser)
+
+                setUser(currUser)
+                fetch("http://localhost:5000/jwt", {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify({ email: currUser.email, name: currUser.displayName })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem("token", data.token)
+                    })
+            } else {
+                localStorage.removeItem("token")
             }
         })
         return () => {

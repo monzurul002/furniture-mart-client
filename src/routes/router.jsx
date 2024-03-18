@@ -5,6 +5,11 @@ import ShowFurniture from "../pages/showFurniture/ShowFurniture";
 import ShowProductDetails from "../pages/showProductDetails/ShowProductDetails";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import AllProducts from "../pages/allProducts/AllProducts";
+import Showroom from "../pages/showroom/Showroom";
+import NotFount from "../pages/notFound/NotFount";
+import About from "../pages/About/About";
+import Contact from "../pages/contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +20,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/allfurnitures",
+                element: <AllProducts />
             },
 
             {
@@ -32,6 +41,22 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login />
+            },
+            {
+                path: "/showrooms",
+                element: <Showroom />
+            },
+            {
+                path: "/about",
+                element: <About />
+            },
+            {
+                path: "/contact",
+                element: <Contact />
+            },
+            {
+                path: "*",
+                element: <NotFount />
             },
 
         ]

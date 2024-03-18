@@ -1,0 +1,59 @@
+[
+    {
+        "division": "dhaka",
+        "list": [
+            {
+                "name": "PL Emporium- Brahmanbaria",
+                "address": "Sador Road-Katpotri-Borguna",
+                "phone": "01896-007968",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe7KE_ksdrFIYLKrMevmx4AscN26FKYn8obHEdHYrNdWq4McbOHFVC3Z_ysOmg3HLHWiY&usqp=CAU"
+            },
+            {
+                "name": "NF Emporium- Brahmanbaria",
+                "address": "HM Road 1826, Dhaka",
+                "phone": "01896-085268",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeNQPuhYieJZRwnZwPJhuDbmmKLUe8zBS6rA&usqp=CAU"
+            },
+            {
+                "name": "KL Emporium- Savar",
+                "address": "HM Road 1826, Dhaka",
+                "phone": "01822205002",
+                "image": "https://thearchitectsdiary.com/wp-content/uploads/2017/07/Regal-Shoes-Showroom-Design-12.jpg"
+            }
+        ]
+    },
+    {
+        "division": "comilla",
+        "list": [
+            {
+                "name": "HJ Emporium- bola",
+                "address": "Sador Road-Katpotri-Comilla",
+                "phone": "0140000000",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipNK67EDktrBWI761QGYvaTX8fS9loReXY_U0fAQ=w408-h306-k-no"
+            },
+            {
+                "name": "Regal Emporium- Noiye",
+                "address": "Sador rod,Moynamoti",
+                "phone": "0130000000",
+                "image": "https://www.mawbiz.com.bd/application/views/module/product_image/regal-furniture-uttara-111_1.PNG"
+            }
+        ]
+    },
+    {
+        "division": "chottogram",
+        "list": [
+            {
+                "name": "Destek Emporium-Market",
+                "address": "Dotto para-Halishor",
+                "phone": "017000000",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQ0pF3V2yNrJMySTyETfj9kNODh0C202dCb3SJZQh2ics79rxin6wBDx2RJ9VTGt9--U&usqp=CAU"
+            },
+            {
+                "name": "Teachers Emporium-Market",
+                "address": "Dotto para-Halishor",
+                "phone": "017000000",
+                "image": "https://www.mawbiz.com.bd/application/views/module/product_image/partex-furniture-mymensingh_1.jpg"
+            }
+        ]
+    }
+]
